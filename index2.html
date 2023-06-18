@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+    <div class="container">
+
+    <main class="main mainAlt">
+
+    
+    <div class="leftBlock">
+
+
+    <section class="calc">
+        <h2 class="sectionTitle">Онлайн расчет стоимости клининга</h2>
+        <div class="calcHeader">
+            <div class="calcHeader__row">
+                <div class="calcHeader__cell calcHeader__typeObject">
+                    <h3 for="" class="calcHeader__label">Выберите тип вашего объекта:</h3>
+                    <div class="typeObject__list">
+                        <div class="typeObject__item">
+                            <img src="imgs/flat.jpg" alt="">
+                            <label for="">Квартира</label>
+                        </div>
+                        <div class="typeObject__item">
+                            <img src="imgs/house.jpg" alt="">
+                            <label for="">Загородный дом или дача</label>
+                        </div>
+                        <div class="typeObject__item">
+                            <img src="imgs/office.jpg" alt="">
+                            <label for="">Офис или комм. помещение</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 for="" class="calcHeader__label">Информация об объекте и типе уборки:</h3>
+            <div class="calcHeader__row calcHeader__objectPars">
+                <div class="calcHeader__cell calcHeader__numberRooms">
+                    <label for="" class="calcHeader__label">Кол-во комнат</label>
+                    <select required name="" id="" class="">
+                        <option value="" selected></option>
+                        <option value="1">Одна</option>
+                        <option value="2">Две</option>
+                        <option value="3">Три</option>
+                    </select>
+                </div>
+                <div class="calcHeader__cell calcHeader__typeCleaning">
+                    <label for="" class="calcHeader__label">Вид уборки</label>
+                    <select required name="" id="" class="">
+                        <option value="" selected></option>
+                        <option value="general">Генеральная уборка</option>
+                        <option value="wet">Влажная уборка</option>
+                        <option value="afterRepiar">После ремонта</option>
+                        <option value="support">Поддерживающая</option>
+                        <option value="ju">Обслуживание юр лиц</option>
+                        <option value="windows">Мытье окон</option>
+                        <option value="special">Спец заказы</option>
+                    </select>
+                </div>
+                <div class="calc__group calc__groupSq">
+                    <h3 class="calc__groupSqTitle">Ваша площадь</h3>
+                    <div class="calc__row calc__field calc__sq"  data-field="sq">
+                        <label for="" class="calcHeader__label"></label>
+                        <input min="0" max="300" class="val" type="range" name="" id="">
+                        <div class="rangeDeg">
+                            <div class="deg">0</div>
+                            <div class="deg">150</div>
+                            <div class="deg">300</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="calc__main">
+            
+            <div class="calc__group calc__groupWindows">
+                <div class="calc__row calc__groupHeader">
+                    <h2 class="calc__groupTitle">Клининг окон</h2>
+                    <div class="calc__toggleGroup"></div>
+                </div>
+                <div class="calc__groupContent">
+                    <div class="calc__row calc__field" data-field="standartPlastic">
+                        <input type="checkbox" name="" id="" class="cb">
+                        <div class="calc__inner">
+                            <label for="">Мойка окон стандарт пластковое 1 створка (150 руб/шт) - <span class="price">150 рублей</span></label>
+                            <div class="inputArea">
+                                <input data-price="150" class="val" type="text" name="standartPlastic" id="" value="0">
+                                <span class="unit">шт</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calc__row calc__field"  data-field="panoramic">
+                        <input type="checkbox" name="" id="" class="cb">
+                        <div class="calc__inner">
+                            <label for="">Панорамное окно (300 руб/м2) - <span class="price">300 рублей</span></label>
+                            <div class="inputArea">
+                                <input data-price="300" class="val" type="text" name="panoramic" id="" value="0">
+                                <div class="unit">м²</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+                </div>
+        </div>
+
+    </section>
+
+    <aside class="rightBlock">
+        <div class="cost">
+            <div class="cost__inner">
+                <div class="cost__value">50 000 рублей</div>
+                <label for="" class="cost__label">Стоимость выбранных вами услуг</label>
+            </div>
+        </div>
+        <div class="sendForm">
+            <div class="sendForm__inner">
+                <h3>Заказать клининг</h3>
+                    <input placeholder="Ваше имя" class="sendForm__name" type="text">
+                    <input placeholder="Ваш телефон" class="sendForm__phone" type="text">
+                <p class="note">Оставляя заявку вы соглашаетесь с условиями политики конфиденциальности и обработки персональных данных</p>
+                <button class="btn sendForm__btn">Отправить</button>
+            </div>
+        </div>
+    </aside>
+</main>
+    <script src="./main.js"></script>
+</body>
+</html>

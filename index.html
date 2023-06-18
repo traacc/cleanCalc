@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+    <main class="main">
+
+    
+    <div class="leftBlock">
+
+
+    <section class="calc">
+        <h2 class="sectionTitle">Онлайн расчет стоимости клининга</h2>
+        <div class="calcHeader">
+            <div class="calcHeader__row">
+                <div class="calcHeader__cell calcHeader__typeObject">
+                    <label for="" class="calcHeader__label">Тип объекта</label>
+                    <select required name="" id="" class="">
+                        <option value="any" selected>Любой</option>
+                        <option value="flat">Квартира</option>
+                        <option value="house">Дом или нежилое помещение</option>
+                    </select>
+                </div>
+                <div class="calcHeader__cell calcHeader__typeCleaning">
+                    <label for="" class="calcHeader__label">Вид уборки</label>
+                    <select required name="" id="" class="">
+                        <option value="" selected></option>
+                        <option value="general">Генеральная уборка</option>
+                        <option value="wet">Влажная уборка</option>
+                        <option value="afterRepiar">После ремонта</option>
+                        <option value="support">Поддерживающая</option>
+                        <option value="ju">Обслуживание юр лиц</option>
+                        <option value="windows">Мытье окон</option>
+                        <option value="special">Спец заказы</option>
+                    </select>
+                </div>
+                <div class="calcHeader__cell calcHeader__numberRooms">
+                    <label for="" class="calcHeader__label">Кол-во комнат</label>
+                    <select required name="" id="" class="">
+                        <option value="" selected></option>
+                        <option value="1">Одна</option>
+                        <option value="2">Две</option>
+                        <option value="3">Три</option>
+                    </select>
+                </div>
+                <div class="calcHeader__cell calcHeader__freq">
+                    <label for="" class="calcHeader__label">Регулярность</label>
+                    <select required name="" id="" class="">
+                        <option value="" selected></option>
+                        <option value="once">Разово</option>
+                        <option value="many">Регулярно</option>
+                    </select>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="calc__main">
+            <div class="calc__group">
+                <div class="calc__row">
+                    <div class="calc__groupOnceCleaning">
+                        <div class="calc__inner">
+                            <label for="">Кол-во работников</label>
+                            <div class="inputArea">
+                                <input data-price="150" class="val" type="text" name="numberWorkers" id="" value="0">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calc__groupManyCleaning">
+                        <div class="calc__inner">
+                            <label for="">Кол-во дней в неделю</label>
+                            <div class="inputArea">
+                                <input data-price="150" class="val" type="text" name="daysInWeek" id="" value="0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="calc__group calc__groupSq">
+                <h3 class="calc__groupSqTitle">Ваша площадь</h3>
+                <div class="calc__row calc__field calc__sq"  data-field="sq">
+                    <label for="" class="calcHeader__label"></label>
+                    <input min="0" max="300" class="val" type="range" name="" id="">
+                    <div class="rangeDeg">
+                        <div class="deg">0</div>
+                        <div class="deg">150</div>
+                        <div class="deg">300</div>
+                    </div>
+                </div>
+            </div>
+            <div class="calc__group calc__groupWindows">
+                <div class="calc__row calc__groupHeader">
+                    <h2 class="calc__groupTitle">Клининг окон</h2>
+                    <div class="calc__toggleGroup"></div>
+                </div>
+                <div class="calc__groupContent">
+                    <div class="calc__row calc__field" data-field="standartPlastic">
+                        <input type="checkbox" name="" id="" class="cb">
+                        <div class="calc__inner">
+                            <label for="">Мойка окон стандарт пластковое 1 створка (150 руб/шт) - <span class="price">150 рублей</span></label>
+                            <div class="inputArea">
+                                <input data-price="150" class="val" type="text" name="standartPlastic" id="" value="0">
+                                <span class="unit">шт</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calc__row calc__field"  data-field="panoramic">
+                        <input type="checkbox" name="" id="" class="cb">
+                        <div class="calc__inner">
+                            <label for="">Панорамное окно (300 руб/м2) - <span class="price">300 рублей</span></label>
+                            <div class="inputArea">
+                                <input data-price="300" class="val" type="text" name="panoramic" id="" value="0">
+                                <div class="unit">м²</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="calc__group calc__groupBalcony">
+                <div class="calc__row calc__groupHeader">
+                    <h2 class="calc__groupTitle">Клининг балкон</h2>
+                    <div class="calc__toggleGroup"></div>
+                </div>
+                <div class="calc__groupContent">
+                    <div class="calc__row calc__field" data-field="balconyCount">
+                        <input type="checkbox" name="" id="" class="cb cb-disable">
+                        <div class="calc__inner">
+                            <label for="">Количество балконов</label>
+                            <div class="inputArea">
+                                <input class="val" type="text" name="balconyCount" id="" value="0">
+                                <span class="unit">шт</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="calc__row calc__field" data-field="windowWash">
+                        <input type="checkbox" name="" id="" class="cb">
+                        <div class="calc__inner">
+                            <label for="">Мойка окон стандарт пластковое 1 створка (150 руб/шт) - <span class="price">0 рублей</span></label>
+                            <div class="inputArea">
+                                <input data-price="150" class="val" type="text" name="windowWash" id="" value="0">
+                                <span class="unit">шт</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calc__row calc__field"  data-field="panoramic">
+                        <input type="checkbox" name="" id=""  class="cb">
+                        <div class="calc__inner">
+                            <label for="">Панорамное окно (300 руб/м2) - <span class="price">0 рублей</span></label>
+                            <div class="inputArea">
+                                <input data-price="300" class="val" type="text" name="panoramic" id="" value="0">
+                                <div class="unit">м²</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="calc__group calc__groupDry">
+                <div class="calc__row calc__groupHeader">
+                    <h2 class="calc__groupTitle">Химчистка</h2>
+                    <div class="calc__toggleGroup"></div>
+                </div>
+                <div class="calc__groupContent">
+                    <div class="calc__row calc__field"  data-field="chair">
+                        <input type="checkbox" name="" id=""  class="cb">
+                        <div class="calc__inner">
+                            <label for="">Хичистка кресла (1000 рублей/шт) - <span class="price">0 рублей</span></label>
+                            <div class="inputArea">
+                                <input data-price="1000" class="val" type="text" name="chair" id="" value="0">
+                                <span class="unit">шт</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="calc__row calc__field"  data-field="chair2">
+                        <input type="checkbox" name="" id=""  class="cb">
+                        <div class="calc__inner">
+                            <label for="">Хичистка кресла (2000 рублей/шт) - <span class="price">0 рублей</span></label>
+                            <div class="inputArea">
+                                <input data-price="2000" class="val" type="text" name="chair2" id="" value="0">
+                                <span class="unit">шт</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="calc__row calc__field"  data-field="seat">
+                        <input type="checkbox" name="" id=""  class="cb">
+                        <div class="calc__inner">
+                            <label for="">Хичистка стула (300 рублей/шт) - <span class="price">0 рублей</span></label>
+                            <div class="inputArea">
+                                <input data-price="300" class="val" type="text" name="seat" id="" value="0">
+                                <span class="unit">шт</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="calc__row calc__field"  data-field="bedMatter">
+                        <input type="checkbox" name="" id=""  class="cb">
+                        <div class="calc__inner">
+                            <label for="">Хичистка Матраса (2000 рублей/шт) - <span class="price">0 рублей</span></label>
+                            <div class="inputArea">
+                                <input data-price="2000" class="val" type="text" name="bedMatter" id="" value="0">
+                                <span class="unit">шт</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="calc__group calc__groupOther">
+                <div class="calc__row calc__groupHeader">
+                    <h2 class="calc__groupTitle">Дополнительные услуги</h2>
+                    <div class="calc__toggleGroup"></div>
+                </div>
+                <div class="calc__groupContent">
+                    <div class="calc__row calc__field"  data-field="curtains">
+                        <input type="checkbox" name="" id=""  class="cb">
+                        <div class="calc__inner">
+                            <label for="">Развешивание штор (1000 руб/час) - <span class="price">0 рублей</span></label>
+                            <div class="inputArea">
+                                <input data-price="1000" class="val" type="text" name="curtains" id="" value="0">
+                                <div class="unit">час(ов)</div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="calc__row calc__field"  data-field="ironing">
+                        <input type="checkbox" name="" id=""  class="cb">
+                        <div class="calc__inner">
+                            <label for="">Глажка (500 руб/час) - <span class="price">0 рублей</span></label>
+                            <div class="inputArea">
+                                <input data-price="500" class="val" type="text" name="ironing" id="" value="0">
+                                <div class="unit">час(ов)</div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="calc__row calc__field"  data-field="luster">
+                        <input type="checkbox" name="" id=""  class="cb">
+                        <div class="calc__inner">
+                            <label for="">Клининг люстр (500 руб/шт) - <span class="price">0 рублей</span></label>
+                            <div class="inputArea">
+                                <input data-price="500" class="val" type="text" name="luster" id="" value="0">
+                                <span class="unit">шт</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="calc__row calc__field"  data-field="item">
+                        <input type="checkbox" name="" id=""  class="cb">
+                        <div class="calc__inner">
+                            <label for="">Уборка вещей (1000 руб/шт) - <span class="price">0 рублей</span></label>
+                            <div class="inputArea">
+                                <input data-price="1000" class="val" type="text" name="item" id="" value="0">
+                                <span class="unit">шт</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="calc__row calc__field"  data-field="fridge">
+                        <input type="checkbox" name="" id=""  class="cb">
+                        <div class="calc__inner">
+                            <label for="">Внутренний клининг холодильника (1000 рублей/шт) - <span class="price">0 рублей</span></label>
+                            <div class="inputArea">
+                                <input data-price="1000" class="val" type="text" name="fridge" id="" value="0">
+                                <span class="unit">шт</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="calc__row calc__field"  data-field="add1">
+                        <input type="checkbox" name="" id=""  class="cb">
+                        <div class="calc__inner">
+                            <label for="">Доп услуга 1 - <span class="price">0 рублей</span></label>
+                            <div class="inputArea">
+                                <input data-price="0" class="val" type="text" name="add1" id="" value="0">
+                                <span class="unit">шт</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="calc__row calc__field"  data-field="add2">
+                        <input type="checkbox" name="" id=""  class="cb">
+                        <div class="calc__inner">
+                            <label for="">Доп услуга 2 - <span class="price">0 рублей</span></label>
+                            <div class="inputArea">
+                                <input data-price="0" class="val" type="text" name="add2" id="" value="0">
+                                <span class="unit">шт</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+    </section>
+</div>
+    <aside class="rightBlock">
+        <div class="arrowUp">
+            <img src="imgs/arrow-long.svg" alt="">
+        </div>
+        <div class="cost">
+            <div class="cost__inner">
+                <div class="cost__value">50 000 рублей</div>
+                <label for="" class="cost__label">Стоимость выбранных вами услуг</label>
+            </div>
+        </div>
+        <div class="sendForm">
+            <div class="sendForm__inner">
+                <h3>Заказать клининг</h3>
+                    <input placeholder="Ваше имя" class="sendForm__name" type="text">
+                    <input placeholder="Ваш телефон" class="sendForm__phone" type="text">
+                <p class="note">Оставляя заявку вы соглашаетесь с условиями политики конфиденциальности и обработки персональных данных</p>
+                <button class="btn sendForm__btn">Отправить</button>
+            </div>
+        </div>
+        <div class="arrowDown">
+            <img src="imgs/arrow-long.svg" alt="">
+        </div>
+    </aside>
+</main>
+    <script src="./main.js"></script>
+</body>
+</html>
