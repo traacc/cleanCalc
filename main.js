@@ -150,6 +150,8 @@ daysInWeek.addEventListener('input', ()=>{
     updateTotalCost();
 });
 sqM2.addEventListener('change', ()=>{
+    let per =  (sqM2.value - sqM2.min) / (sqM2.max - sqM2.min) * 100;
+    sqM2.style.background = `linear-gradient(to right, #0F5696 ${per}%, #D9D9D9 ${per}%)`;
     updateGroup();
     updateTotalCost();
 });
@@ -168,6 +170,8 @@ fqType.addEventListener('change', ()=>{
     updateTotalCost();
 });
 document.addEventListener("DOMContentLoaded",()=>{
+    let per =  (sqM2.value - sqM2.min) / (sqM2.max - sqM2.min) * 100;
+    sqM2.style.background = `linear-gradient(to right, #0F5696 ${per}%, #D9D9D9 ${per}%)`;
     updateGroup();
     updateTotalCost();
 });

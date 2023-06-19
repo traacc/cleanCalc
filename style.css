@@ -277,7 +277,7 @@ option:not(:first-of-type) {
     content: "";
     position: absolute;
     left: 10px;
-    top: 11px;
+    top: 14px;
     z-index: 11;
     display: block;
     width: 13px;
@@ -295,13 +295,35 @@ option:not(:first-of-type) {
 .rightBlock {
     margin-top: 20vh;
     flex-basis: 400px;
+
+    position: sticky;
+    top: 100px;
 }
+
+.cost {
+    padding: 3em;
+    background: linear-gradient(180deg, #0F5696 0%, #2588E1 100%);
+    border-radius: 20px;
+    color: #fff;
+
+    position: sticky;
+    top: 40px;
+
+    text-align: center;
+}
+.cost .cost__value {
+    font-weight: 700;
+    font-size: 30px;
+}
+
 .sendForm {
     border: 1px solid #E7E7E7;
     border-radius: 15px;
 
     margin-top: 2em;
-    
+
+    position: sticky;
+    top: 200px;
 }
 .sendForm__inner {
     display: flex;
@@ -381,43 +403,21 @@ body.calcList .calcList {
     opacity: 1;
 }
 
-.cost {
-    padding: 3em;
-    background: linear-gradient(180deg, #0F5696 0%, #2588E1 100%);
-    border-radius: 20px;
-    color: #fff;
 
-    text-align: center;
-}
-.cost .cost__value {
-    font-weight: 700;
-    font-size: 30px;
-}
-.arrowUp {
-    text-align: center;
-    margin-bottom: 1em;
-}
-.arrowDown {
-    text-align: center;
-    margin-top: 1em;
-    transform: rotate(180deg);
-}
 input[type=range] {
+    -webkit-appearance: none;
+    appearance: none;
     width: 100%;
     margin: 3.45px 0;
-    background-color: transparent;
-    -webkit-appearance: none;
-  }
-  input[type=range]:focus {
+    border-radius: 10px;
     outline: none;
+
   }
+
   input[type=range]::-webkit-slider-runnable-track {
-    background: #3071a9;
-    border: 0.1px solid #010101;
-    border-radius: 9.9px;
-    width: 100%;
-    height: 10.1px;
+    height: 10px;
     cursor: pointer;
+    
   }
   input[type=range]::-webkit-slider-thumb {
     margin-top: -3.55px;
@@ -429,15 +429,13 @@ input[type=range] {
     cursor: pointer;
     -webkit-appearance: none;
   }
-  input[type=range]:focus::-webkit-slider-runnable-track {
-    background: #367ebd;
-  }
-  input[type=range]::-moz-range-track {
-    background: #3071a9;
-    border: 0.1px solid #010101;
+
+ input[type=range]::-moz-range-track {
+
+
     border-radius: 9.9px;
     width: 100%;
-    height: 10.1px;
+
     cursor: pointer;
   }
   input[type=range]::-moz-range-thumb {
@@ -448,6 +446,16 @@ input[type=range] {
     border-radius: 50px;
     cursor: pointer;
   }
+  /*input[type="range"]::-moz-range-progress {
+    background: linear-gradient(180deg, #0F5696 0%, #2588E1 100%);
+    height: 10.1px;
+  }*/
+
+
+
+
+
+
   input[type=range]::-ms-track {
     background: transparent;
     border-color: transparent;
