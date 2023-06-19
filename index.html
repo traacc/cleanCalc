@@ -22,14 +22,14 @@
             <div class="calcHeader__row">
                 <div class="calcHeader__cell calcHeader__typeObject">
                     <label for="" class="calcHeader__label">Тип объекта</label>
-                    <select required name="" id="" class="">
+                    <select required name="typeObject" id="" class="">
                         <option value="flat" selected>Квартира</option>
                         <option value="house">Дом или нежилое помещение</option>
                     </select>
                 </div>
                 <div class="calcHeader__cell calcHeader__typeCleaning">
                     <label for="" class="calcHeader__label">Вид уборки</label>
-                    <select required name="" id="" class="">
+                    <select required name="typeCleaning" id="" class="">
                         <option value="" selected></option>
                         <option value="general">Генеральная уборка</option>
                         <option value="wet">Влажная уборка</option>
@@ -42,7 +42,7 @@
                 </div>
                 <div class="calcHeader__cell calcHeader__numberRooms">
                     <label for="" class="calcHeader__label">Кол-во комнат</label>
-                    <select required name="" id="" class="">
+                    <select name="numberRooms" id="" class="">
                         <option value="" selected></option>
                         <option value="1">Одна</option>
                         <option value="2">Две</option>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="calcHeader__cell calcHeader__freq">
                     <label for="" class="calcHeader__label">Регулярность</label>
-                    <select required name="" id="" class="">
+                    <select name="freq" id="" class="">
                         <option value="" selected></option>
                         <option value="once">Разово</option>
                         <option value="many">Регулярно</option>
@@ -86,7 +86,7 @@
                 <h3 class="calc__groupSqTitle">Ваша площадь</h3>
                 <div class="calc__row calc__field calc__sq"  data-field="sq">
                     <label for="" class="calcHeader__label"></label>
-                    <input min="0" max="300" class="val" type="range" name="" id="">
+                    <input min="0" max="300" class="val" type="range" name="sq" id="">
                     <div class="rangeDeg">
                         <div class="deg">0</div>
                         <div class="deg">150</div>
