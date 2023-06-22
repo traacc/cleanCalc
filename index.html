@@ -25,6 +25,7 @@
                     <select required name="typeObject" id="" class="">
                         <option value="flat" selected>Квартира</option>
                         <option value="house">Дом или нежилое помещение</option>
+                        <option value="non-living">Нежилое помещение</option>
                     </select>
                 </div>
                 <div class="calcHeader__cell calcHeader__typeCleaning">
@@ -47,6 +48,7 @@
                         <option value="1">Одна</option>
                         <option value="2">Две</option>
                         <option value="3">Три</option>
+                        <option value="3">Больше трех</option>
                     </select>
                 </div>
                 <div class="calcHeader__cell calcHeader__freq">
@@ -62,13 +64,12 @@
             </div>
         </div>
         <div class="calc__main">
-            <div class="calc__group">
-                <div class="calc__row">
+                <div class="calc__row calcFqGroup">
                     <div class="calc__groupOnceCleaning">
                         <div class="calc__inner">
                             <label for="">Кол-во работников</label>
                             <div class="inputArea">
-                                <input data-price="150" class="val" type="text" name="numberWorkers" id="" value="0">
+                                <input data-price="150" maxlength="1" class="val" type="text" name="numberWorkers" id="" value="0">
                             </div>
                         </div>
                     </div>
@@ -76,24 +77,36 @@
                         <div class="calc__inner">
                             <label for="">Кол-во дней в неделю</label>
                             <div class="inputArea">
-                                <input data-price="150" class="val" type="text" name="daysInWeek" id="" value="0">
+                                <input data-price="150" maxlength="1" class="val" type="text" name="daysInWeek" id="" value="0">
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
             <div class="calc__group calc__groupSq">
                 <h3 class="calc__groupSqTitle">Ваша площадь</h3>
                 <div class="calc__row calc__field calc__sq"  data-field="sq">
                     <label for="" class="calcHeader__label"></label>
-                    <input min="0" max="300" class="val" type="range" name="sq" id="">
+                    <input min="0" max="300" value="0" class="val" type="range" name="sq" id="">
                     <div class="rangeDeg">
                         <div class="deg">0</div>
-                        <div class="deg">150</div>
+                        <div class="deg degMoving">0</div>
                         <div class="deg">300</div>
                     </div>
                 </div>
             </div>
+            <div class="calc__group calc__groupSq hide">
+                <h3 class="calc__groupSqTitle">Ваша площадь</h3>
+                <div class="calc__row calc__field calc__sq"  data-field="sq">
+                    <label for="" class="calcHeader__label"></label>
+                    <input min="0" max="300" value="0" class="val" type="range" name="sq" id="">
+                    <div class="rangeDeg">
+                        <div class="deg">0</div>
+                        <div class="deg degMoving">0</div>
+                        <div class="deg">300</div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="calc__specialNote hide">Стоимость спец заказов рассчитывается индивидуально</h2>
             <div class="calc__group calc__groupWindows">
                 <div class="calc__row calc__groupHeader">
                     <h2 class="calc__groupTitle">Клининг окон</h2>

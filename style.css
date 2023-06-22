@@ -199,7 +199,10 @@ option:not(:first-of-type) {
     padding-top: 1em;
     padding-bottom: 1em;
 }
-
+.calcFqGroup {
+    display: flex;
+    column-gap: 1em;
+}
 .calc__row .calc__total label{
     width: 6.2em;
 }
@@ -221,10 +224,16 @@ option:not(:first-of-type) {
 .calc__sq {
     display: flex;
     flex-direction: column;
+    max-width: 400px;
 }
 .calc__sq .rangeDeg {
     display: flex;
     justify-content: space-between;
+    position: relative;
+}
+.calc__sq .rangeDeg .degMoving {
+    position: absolute;
+    background-color: #fff;
 }
 .btn {
     display: block;
@@ -623,4 +632,47 @@ input[type=range] {
     position: absolute;
     left: 6em;
     top: 0.6em;
+}
+
+@media (max-width:768px) {
+    .main {
+        flex-direction: column;
+    }
+    .rightBlock {
+        margin-top: 1em;
+    }
+    .calcHeader__row {
+        flex-direction: column;
+        row-gap: 1em;
+    }
+    .sectionTitle {
+        font-size: 32px;
+    }
+    .calc__groupTitle {
+        font-size: 28px;
+    }
+    .cb {
+        flex-shrink: 0;
+    }
+    .calc__field label{
+        font-size: 18px;
+    }
+}
+
+@media (max-width:548px) {
+    .sectionTitle {
+        font-size: 28px;
+    }
+    .calc__field label{
+        font-size: 16px;
+    }
+    .calc__groupTitle {
+        font-size: 22px;
+    }
+}
+
+@media (max-width:480px) {
+    .calc__field label{
+        font-size: 14px;
+    }
 }
