@@ -282,7 +282,7 @@ option:not(:first-of-type) {
 
     cursor: pointer;
 }
-.calc__toggleGroup::after {
+/*.calc__toggleGroup::after {
     content: "";
     position: absolute;
     left: 10px;
@@ -296,12 +296,23 @@ option:not(:first-of-type) {
 
     transform: rotate(45deg);
     transition: all .5s ease-out;
+    transform-origin: center;
   }
   .calc__toggleGroup--hidden.calc__toggleGroup::after {
     transform: rotate(-135deg);
     top: 7px;
+  }*/
+  .calc__toggleGroup::after {
+    content: url(./imgs/arrowGroup.svg);
+    position: absolute;
+    left: 8px;
+    top: 6px;
+    transition: all .5s ease-out;
   }
-
+  .calc__toggleGroup--hidden.calc__toggleGroup::after {
+    transform: scaleY(-1);
+    top: 8px;
+  }
 .rightBlock {
     margin-top: 20vh;
     flex-basis: 400px;

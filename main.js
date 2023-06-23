@@ -43,7 +43,7 @@ const otherGroup = calc.querySelector('.calc__groupOther');
 const nameEl = calc.querySelector('.sendForm__name');
 const phoneEl = calc.querySelector('.sendForm__phone');
 
-const url = '';
+const url = './sendMail.php';
 
 const totalCosts = document.querySelector('.cost__value');
 
