@@ -174,7 +174,7 @@ function updateTotalCost() {
             basePrice = workersCount.value * 2500;
             break;
         case 'many':
-            basePrice = workersCount.value * daysInWeek.value * 3500;
+            basePrice = workersCount.value * daysInWeek.value * 2500;
             break;
         default:
             break;
@@ -218,6 +218,7 @@ sqM2.addEventListener('input', ()=>{
     updateTotalCost();
 });
 objectType.addEventListener('change', ()=>{
+    cleaningType.selectedIndex = 0;
     fqType.selectedIndex = 0;
     updateGroup();
     updateTotalCost();
