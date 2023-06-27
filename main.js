@@ -40,8 +40,8 @@ const balconyGroup = calc.querySelector('.calc__groupBalcony');
 const dryGroup = calc.querySelector('.calc__groupDry');
 const otherGroup = calc.querySelector('.calc__groupOther');
 
-const nameEl = calc.querySelector('.sendForm__name');
-const phoneEl = calc.querySelector('.sendForm__phone');
+const nameEl = document.querySelector('.sendForm__name');
+const phoneEl = document.querySelector('.sendForm__phone');
 
 const url = './sendMail.php';
 
@@ -58,10 +58,22 @@ function updateGroup() {
     cleaningTypeList.forEach((el)=>{
         el.classList.add('hide');
     });
+    calc.querySelectorAll('.calc__toggleGroup').forEach((el)=>{
+            el.parentElement.parentElement.querySelector('.calc__groupContent').classList.add('hide');
+            el.classList.add('calc__toggleGroup--hidden');
+    });
     switch (objectType.value) {
 
         case 'flat':
+            roomsElement.classList.remove('hide');
+            ctGeneral.classList.remove('hide');
+            ctWet.classList.remove('hide');
+            ctAfterRepiar.classList.remove('hide');
+            ctWindows.classList.remove('hide');
+            ctSpecial.classList.remove('hide');
+            break;
         case 'house':
+            
             ctGeneral.classList.remove('hide');
             ctWet.classList.remove('hide');
             ctAfterRepiar.classList.remove('hide');
@@ -178,7 +190,6 @@ function updateTotalCost() {
 
 calc.querySelectorAll('.calc__toggleGroup').forEach((el)=>{
     el.addEventListener('click', ()=>{
-        console.log(el.parentElement);
         el.parentElement.parentElement.querySelector('.calc__groupContent').classList.toggle('hide');
         el.classList.toggle('calc__toggleGroup--hidden');
     });
@@ -222,7 +233,7 @@ fqType.addEventListener('change', ()=>{
 });
 
 async function sendMail(obj) {
-    await fetch(url, {method: 'POST', body: obj});
+    await fetch(url, {method: 'POST', body: JSON.stringify(obj)});
 }
 
 document.querySelector('.sendForm__btn').addEventListener('click', async ()=>{
@@ -246,7 +257,7 @@ document.querySelector('.sendForm__btn').addEventListener('click', async ()=>{
     }
 
     console.log(mailData);
-    //await sendMail(mailData);
+    await sendMail(mailData);
 });
 document.addEventListener("DOMContentLoaded",()=>{
     let per =  (sqM2.value - sqM2.min) / (sqM2.max - sqM2.min) * 100;
