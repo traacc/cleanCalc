@@ -196,13 +196,13 @@ calc.querySelectorAll('.calc__toggleGroup').forEach((el)=>{
 });
 workersCount.addEventListener('input', (e)=>{
     if(/[6-9]/.test(e.target.value)) {
-        e.target.value="";
+        e.target.value="1";
     }
     updateTotalCost();
 });
 daysInWeek.addEventListener('input', (e)=>{
     if(/[8-9]/.test(e.target.value)) {
-        e.target.value="";
+        e.target.value="1";
     }
     updateTotalCost();
 });
